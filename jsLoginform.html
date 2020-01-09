@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container bg-success mt-5">
+            <div class="form-group">
+                <label>UserName:</label>
+                <input class="form-control" id="anr" onkeypress="myfun();" placeholder="UserName"/>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input class="form-control" id="ntr" onkeypress="myfunction();" placeholder="Password"/>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="login();">Login</button>
+                <button type="button" class="btn btn-info" onclick="rest();">Reset</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function myfun(){
+            var username=document.getElementById("anr").value;
+            var a=isNaN(username);
+            if(a==false){
+                console.log("valid username")
+            }else{
+                console.log("invalid username")
+            }
+        }
+        function myfunction(){
+            var password=document.getElementById("ntr").value;
+            var x=isNaN(password);
+            if(x==true){
+                console.log("valid password")
+            }else{
+                console.log("invalid password")
+            }
+
+        }
+        function login(){
+            var username=document.getElementById("anr").value;
+            console.log(username)
+            var password=document.getElementById("ntr").value;
+            console.log(password);
+        }
+        function rest(){
+            var username=document.getElementById("anr").value="";
+            var password=document.getElementById("ntr").value="";
+        }
+    </script>
+</html>
